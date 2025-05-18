@@ -32,6 +32,12 @@ function displayReducer(state, { type, pressed }) {
 			return { operator: "", display: "0", previousOperand: "" }
 		}
 
+		case "del": {
+			if (state.display.length === 1) return { ...state, display: "0" }
+
+			return { ...state, display: state.display.slice(0, -1) }
+		}
+
 		default: {
 			return { ...state }
 		}
