@@ -25,6 +25,12 @@ function App() {
 		})
 	}
 
+	function handleClear() {
+		dispatch({
+			type: "clear"
+		})
+	}
+
   return (
     <>
       <div className="calculator">
@@ -33,7 +39,7 @@ function App() {
 			<p className="current-number">{ state.display }</p>
 		</div>
 		<div className="buttons">
-			<button type="button" className="btn-clear">AC</button>
+			<button type="button" className="btn-clear" onClick={ handleClear }>AC</button>
 			<button type="button" className="btn-del">DEL</button>
 			<button type="button" className="btn-x big-font" onClick={() => handleOperation("*")}>x</button>
 			<button type="button" className="btn-num" onClick={() => handleNumberButton("7")}>7</button>

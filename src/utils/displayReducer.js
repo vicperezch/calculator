@@ -28,6 +28,10 @@ function displayReducer(state, { type, pressed }) {
 			return { operator: "", display: result.toString(), previousOperand: result.toString() }
 		}
 
+		case "clear": {
+			return { operator: "", display: "0", previousOperand: "" }
+		}
+
 		default: {
 			return { ...state }
 		}
