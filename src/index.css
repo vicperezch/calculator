@@ -65,7 +65,7 @@ p {
 
 div.buttons {
 	display: grid;
-	grid-template-areas: "ac ac del x"
+	grid-template-areas: "ac del div x"
 						"b7 b8 b9 minus"
 						"b6 b5 b4 plus"
 						"b1 b2 b3 eq"

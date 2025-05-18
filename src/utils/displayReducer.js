@@ -13,7 +13,7 @@ function displayReducer(state, { type, pressed }) {
 			if (state.display === "ERROR") return { ...state }
 			if (!state.operator) return { display: "0", operator: pressed, previousOperand: state.display }
 
-			const result = evalExpression(state.previousOperand, state.display, state.operator)
+			const result = evalExpression(parseFloat(state.previousOperand), parseFloat(state.display), state.operator)
 			if (result.toString().length > 9 || result < 0) return { operator: "", display: "ERROR", previousOperand: "" } 
 
 			return { operator: pressed, display: "0", previousOperand: result.toString() }
@@ -22,10 +22,11 @@ function displayReducer(state, { type, pressed }) {
 		case "eq": {
 			if (!state.previousOperand || !state.operator || state.display === "ERROR") return { ...state }
 
-			const result = evalExpression(state.previousOperand, state.display, state.operator)
-			if (result.toString().length > 9 || result < 0) return { operator: "", display: "ERROR", previousOperand: "" }
+			const result = evalExpression(parseFloat(state.previousOperand), parseFloat(state.display), state.operator)
+			if (Number.isInteger(result) && result.toString().length > 9) return { operator: "", display: "ERROR", previousOperand: "" }
+			if (result < 0) return { operator: "", display: "ERROR", previousOperand: "" }
 
-			return { operator: "", display: result.toString(), previousOperand: result.toString() }
+			return { operator: "", display: result.toString().slice(0, 9), previousOperand: result.toString().slice(0, 9) }
 		}
 
 		case "clear": {

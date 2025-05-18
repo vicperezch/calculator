@@ -1,19 +1,22 @@
 function evalExpression(a, b, operator) {
 	switch (operator) {
 		case "+": {
-			return parseInt(a) + parseInt(b)
+			return a + b
 		}
 
 		case "-": {
-			return parseInt(a) - parseInt(b)
+			return a - b
 		}
 
 		case "*": {
-			return parseInt(a) * parseInt(b)
+			return a * b
+		}
+
+		case "/": {
+			return a / b
 		}
 
 		default:
-			console.log("break")
 			break;
 	}
 }

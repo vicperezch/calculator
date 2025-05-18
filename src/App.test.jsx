@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { test, describe, it, expect } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import App from './App.jsx'
 
 describe("Display constraints", () => {

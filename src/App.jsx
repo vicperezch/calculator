@@ -47,6 +47,7 @@ function App() {
 		<div className="buttons">
 			<button type="button" className="btn-clear" onClick={ handleClear }>AC</button>
 			<button type="button" className="btn-del" onClick={ handleDel }>DEL</button>
+			<button type="button" className="btn-div big-font" onClick={() => handleOperation("/")}>/</button>
 			<button type="button" className="btn-x big-font" onClick={() => handleOperation("*")}>x</button>
 			<button type="button" className="btn-num" onClick={() => handleNumberButton("7")}>7</button>
 			<button type="button" className="btn-num" onClick={() => handleNumberButton("8")}>8</button>
