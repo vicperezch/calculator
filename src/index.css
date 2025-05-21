@@ -68,7 +68,7 @@ div.buttons {
 	grid-template-areas: "ac del div x"
 						"b7 b8 b9 minus"
 						"b6 b5 b4 plus"
-						"b1 b2 b3 eq"
+						"b1 b2 b3 mod"
 						"b0 b0 b0 eq";
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(5, 1fr);

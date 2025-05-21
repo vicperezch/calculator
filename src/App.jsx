@@ -60,6 +60,7 @@ function App() {
 			<button type="button" className="btn-num" onClick={() => handleNumberButton("1")}>1</button>
 			<button type="button" className="btn-num" onClick={() => handleNumberButton("2")}>2</button>
 			<button type="button" className="btn-num" onClick={() => handleNumberButton("3")}>3</button>
+			<button type="button" className="btn-mod" onClick={() => handleOperation("%")}>%</button>
 			<button type="button" className="btn-0" onClick={() => handleNumberButton("0")}>0</button>
 			<button type="button" className="btn-eq big-font" onClick={ handleEq }>=</button>
 		</div>

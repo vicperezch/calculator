@@ -16,6 +16,10 @@ function evalExpression(a, b, operator) {
 			return a / b
 		}
 
+		case "%": {
+			return a % b
+		}
+
 		default:
 			break;
 	}
