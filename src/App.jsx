@@ -37,6 +37,12 @@ function App() {
 		})
 	}
 
+	function handleToggleSign() {
+		dispatch({
+			type: "sign"
+		})
+	}
+
   return (
     <>
       <div className="calculator">
@@ -47,8 +53,10 @@ function App() {
 		<div className="buttons">
 			<button type="button" className="btn-clear" onClick={ handleClear }>AC</button>
 			<button type="button" className="btn-del" onClick={ handleDel }>DEL</button>
+			<button type="button" className="btn-sign" onClick={ handleToggleSign }>+/-</button>
 			<button type="button" className="btn-div big-font" onClick={() => handleOperation("/")}>/</button>
 			<button type="button" className="btn-x big-font" onClick={() => handleOperation("*")}>x</button>
+			<button type="button" className="btn-mod" onClick={() => handleOperation("%")}>%</button>
 			<button type="button" className="btn-num" onClick={() => handleNumberButton("7")}>7</button>
 			<button type="button" className="btn-num" onClick={() => handleNumberButton("8")}>8</button>
 			<button type="button" className="btn-num" onClick={() => handleNumberButton("9")}>9</button>
@@ -60,8 +68,8 @@ function App() {
 			<button type="button" className="btn-num" onClick={() => handleNumberButton("1")}>1</button>
 			<button type="button" className="btn-num" onClick={() => handleNumberButton("2")}>2</button>
 			<button type="button" className="btn-num" onClick={() => handleNumberButton("3")}>3</button>
-			<button type="button" className="btn-mod" onClick={() => handleOperation("%")}>%</button>
 			<button type="button" className="btn-0" onClick={() => handleNumberButton("0")}>0</button>
+			<button type="button" className="btn-dec big-font" onClick={() => handleNumberButton("0")}>.</button>
 			<button type="button" className="btn-eq big-font" onClick={ handleEq }>=</button>
 		</div>
       </div>

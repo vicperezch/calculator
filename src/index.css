@@ -65,11 +65,12 @@ p {
 
 div.buttons {
 	display: grid;
-	grid-template-areas: "ac del div x"
+	grid-template-areas: "ac ac del del"
+						"sign mult div mod"
 						"b7 b8 b9 minus"
 						"b6 b5 b4 plus"
-						"b1 b2 b3 mod"
-						"b0 b0 b0 eq";
+						"b1 b2 b3 eq"
+						"b0 b0 decimal eq";
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(5, 1fr);
 	gap: 10px;
@@ -96,6 +97,10 @@ button.btn-num {
 
 button.btn-clear {
 	grid-area: ac;	
+}
+
+button.btn-del {
+	grid-area: del;
 }
 
 button.btn-0 {

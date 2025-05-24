@@ -28,6 +28,12 @@ function displayReducer(state, { type, pressed }) {
 			return { operator: "", display: result.toString(), previousOperand: result.toString() }
 		}
 
+		case "sign": {
+			if (state.display === "ERROR" || state.display.length === 9) return { ...state }
+
+			return { ...state, display: (parseFloat(state.display) * -1).toString()}
+		}
+
 		case "clear": {
 			return { operator: "", display: "0", previousOperand: "" }
 		}
