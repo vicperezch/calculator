@@ -34,6 +34,12 @@ function displayReducer(state, { type, pressed }) {
 			return { ...state, display: (parseFloat(state.display) * -1).toString()}
 		}
 
+		case "decimal": {
+			if (state.display.includes(".") || state.display.length >== 8) return { ...state }
+
+			return {...state, display: state.display + "." }
+		}
+
 		case "clear": {
 			return { operator: "", display: "0", previousOperand: "" }
 		}
