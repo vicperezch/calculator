@@ -35,7 +35,7 @@ function displayReducer(state, { type, pressed }) {
 		}
 
 		case "decimal": {
-			if (state.display.includes(".") || state.display.length >== 8) return { ...state }
+			if (state.display.includes(".") || state.display.length >= 8) return { ...state }
 
 			return {...state, display: state.display + "." }
 		}

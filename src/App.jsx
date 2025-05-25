@@ -1,5 +1,6 @@
 import { useReducer } from 'react'
 import displayReducer from './utils/displayReducer.js'
+import NumberButton from './components/NumberButton.jsx'
 import './App.css'
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 			type: "numberButton",
 			pressed: num
 		})
-	}
+	};
 
 	function handleOperation(op) {
 		dispatch({
@@ -63,17 +64,17 @@ function App() {
 			<button type="button" className="btn-div big-font" onClick={() => handleOperation("/")}>/</button>
 			<button type="button" className="btn-x big-font" onClick={() => handleOperation("*")}>x</button>
 			<button type="button" className="btn-mod" onClick={() => handleOperation("%")}>%</button>
-			<button type="button" className="btn-num" onClick={() => handleNumberButton("7")}>7</button>
-			<button type="button" className="btn-num" onClick={() => handleNumberButton("8")}>8</button>
-			<button type="button" className="btn-num" onClick={() => handleNumberButton("9")}>9</button>
+			<NumberButton value={ "7" } onClickFunc={ handleNumberButton }/>
+			<NumberButton value={ "8" } onClickFunc={ handleNumberButton }/>
+			<NumberButton value={ "9" } onClickFunc={ handleNumberButton }/>
 			<button type="button" className="btn-plus big-font" onClick={() => handleOperation("+")}>+</button>
-			<button type="button" className="btn-num" onClick={() => handleNumberButton("4")}>4</button>
-			<button type="button" className="btn-num" onClick={() => handleNumberButton("5")}>5</button>
-			<button type="button" className="btn-num" onClick={() => handleNumberButton("6")}>6</button>
+			<NumberButton value={ "4" } onClickFunc={ handleNumberButton }/>
+			<NumberButton value={ "5" } onClickFunc={ handleNumberButton }/>
+			<NumberButton value={ "6" } onClickFunc={ handleNumberButton }/>
 			<button type="button" className="btn-minus big-font" onClick={() => handleOperation("-")}>-</button>
-			<button type="button" className="btn-num" onClick={() => handleNumberButton("1")}>1</button>
-			<button type="button" className="btn-num" onClick={() => handleNumberButton("2")}>2</button>
-			<button type="button" className="btn-num" onClick={() => handleNumberButton("3")}>3</button>
+			<NumberButton value={ "1" } onClickFunc={ handleNumberButton }/>
+			<NumberButton value={ "2" } onClickFunc={ handleNumberButton }/>
+			<NumberButton value={ "3" } onClickFunc={ handleNumberButton }/>
 			<button type="button" className="btn-0" onClick={() => handleNumberButton("0")}>0</button>
 			<button type="button" className="btn-dec big-font" onClick={ handleDecimal }>.</button>
 			<button type="button" className="btn-eq big-font" onClick={ handleEq }>=</button>
