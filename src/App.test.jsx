@@ -9,7 +9,7 @@ const clickBtn = async (user, label) => {
 }
 
 describe("Display constraints", () => {
-	it('should not allow more than 9 digits on display', async () => {
+	it("should not allow more than 9 digits on display", async () => {
     	render(<App />)
     	const user = userEvent.setup()
 	
@@ -18,10 +18,36 @@ describe("Display constraints", () => {
 	    }
 	
 	    const display = screen.getByText((_, element) =>
-	    	element?.classList.contains('current-number')
+	    	element?.classList.contains("current-number")
 	    )	
 
     	expect(display.textContent.length).toEqual(9)
+	})
+
+	it("should not delete when screen shows error", async () => {
+		render(<App />)
+		const user = userEvent.setup()
+
+    	await clickBtn(user, "8")
+    	await clickBtn(user, "/")
+    	await clickBtn(user, "0")
+    	await clickBtn(user, "=")
+
+    	const display = screen.getByText((_, el) =>
+      		el?.classList.contains("current-number")
+    	)
+
+    	expect(display.textContent).toBe("ERROR")
+
+    	await clickBtn(user, "DEL")
+    	expect(display.textContent).toBe("ERROR")
+
+    	await clickBtn(user, "5")
+    	await clickBtn(user, "+")
+    	await clickBtn(user, "2")
+    	await clickBtn(user, "=")
+
+    	expect(display.textContent).toBe("7")
 	})
 })
 
@@ -30,17 +56,17 @@ describe("Calculator operations", () => {
 		render(<App />)
     	const user = userEvent.setup()
 
-    	await clickBtn(user, '2')
-    	await clickBtn(user, '+')
-    	await clickBtn(user, '3')
-    	await clickBtn(user, 'x')
-    	await clickBtn(user, '4')
-    	await clickBtn(user, '-')
-    	await clickBtn(user, '5')
-    	await clickBtn(user, '=')
+    	await clickBtn(user, "2")
+    	await clickBtn(user, "+")
+    	await clickBtn(user, "3")
+    	await clickBtn(user, "x")
+    	await clickBtn(user, "4")
+    	await clickBtn(user, "-")
+    	await clickBtn(user, "5")
+    	await clickBtn(user, "=")
 
     	const display = screen.getByText((_, el) =>
-      		el?.classList.contains('current-number')
+      		el?.classList.contains("current-number")
     	)
 
     	expect(display.textContent).toBe("15")

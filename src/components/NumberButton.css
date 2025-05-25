@@ -1,0 +1,18 @@
+.btn-num {
+  color: rgba(255, 255, 255, 0.87);
+	min-width: 70px;
+	min-height: 70px;
+  border-radius: 35px;
+  border: 1px solid transparent;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: inherit;
+  background-color: #27292E;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.btn-num:hover {
+  border-color: #FFFFFF;
+}
+

@@ -91,10 +91,6 @@ button {
   transition: border-color 0.25s;
 }
 
-button.btn-num {
-	background-color: #27292E;
-}
-
 button.btn-clear {
 	grid-area: ac;	
 }
@@ -117,24 +113,3 @@ button.big-font {
 	font-size: 30px;
 }
 
-button:hover {
-  border-color: #FFFFFF;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
