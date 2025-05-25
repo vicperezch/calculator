@@ -1,12 +1,65 @@
-# React + Vite
+# React Calculator
+A simple calculator built with React + Vite that supports basic arithmetic operations. It is fully tested with Vitest and React Testing Library, as well as Storybook.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- **Basic arithmetic:** Addition, subtraction, multiplication, division and modulo.
+- **Input:** Supports decimal and negative numbers.
+- **Restrictions:** Limits input and output to a maximum of 9 digits.
+- **Testing:** It uses Vitest, React Testing Library and Storybook to test the application.
+- **JS standard compliant:** Implements a linting script that disallows semicolons.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Clone the repository:**
 
-## Expanding the ESLint configuration
+   ```bash
+   git clone https://github.com/vicperezch/calculator.git
+   cd calculator
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **Install dependencies:**
+
+   With Node.js installed, run:
+
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+### Running the App
+
+To start the development server, run:
+
+```bash
+npm run dev
+```
+
+This will launch the app in development mode. Open [http://localhost:5137](http://localhost:5173) in your browser to see the calculator.
+
+## Custom scripts
+
+This project implements scripts for testing and linting.
+
+### Running Tests
+
+To run all tests, execute:
+
+```bash
+npm test
+```
+
+### Storybook
+
+To run storybook, execute:
+```bash
+npm run storybook
+```
+
+### Linting
+
+To check all files, run:
+
+```bash
+npm run lint
+```
