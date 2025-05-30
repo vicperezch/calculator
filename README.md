@@ -19,10 +19,10 @@ A simple calculator built with React + Vite that supports basic arithmetic opera
 
 2. **Install dependencies:**
 
-   With Node.js installed, run:
+   With Bun installed, run:
 
    ```bash
-   npm install
+   bun install
    ```
 
 ## Usage
@@ -32,7 +32,7 @@ A simple calculator built with React + Vite that supports basic arithmetic opera
 To start the development server, run:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 This will launch the app in development mode. Open [http://localhost:5137](http://localhost:5173) in your browser to see the calculator.
@@ -46,14 +46,14 @@ This project implements scripts for testing and linting.
 To run all tests, execute:
 
 ```bash
-npm test
+bun run test
 ```
 
 ### Storybook
 
 To run storybook, execute:
 ```bash
-npm run storybook
+bun run storybook
 ```
 
 ### Linting
@@ -61,5 +61,5 @@ npm run storybook
 To check all files, run:
 
 ```bash
-npm run lint
+bun run lint
 ```
