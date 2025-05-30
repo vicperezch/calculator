@@ -1,6 +1,7 @@
 import { useReducer } from 'react'
 import displayReducer from './utils/displayReducer.js'
 import NumberButton from './components/NumberButton.jsx'
+import Display from './components/Display.jsx'
 import './App.css'
 
 function App() {
@@ -53,10 +54,7 @@ function App() {
   return (
     <>
       <div className="calculator">
-		<div className="display">
-			<p className="operation">{ state.previousOperand } { state.operator }</p>
-			<p className="current-number">{ state.display }</p>
-		</div>
+		<Display previous={ state.previousOperand } operator={ state.operator } current={ state.display }/>
 		<div className="buttons">
 			<button type="button" className="btn-clear" onClick={ handleClear }>AC</button>
 			<button type="button" className="btn-del" onClick={ handleDel }>DEL</button>

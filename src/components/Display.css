@@ -1,0 +1,26 @@
+.display {
+	background-color: #212327;
+	color: rgba(255, 255, 255, 0.87);
+	max-width: 350px;
+	font-family: system-ui;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	justify-content: center;
+}
+
+.current-number {
+	font-size: 45px;
+	font-weight: 500;
+}
+
+.operation {
+	color: #CCCDD7;
+	min-height: 24px;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}

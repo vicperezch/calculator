@@ -12,7 +12,6 @@ div#root {
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #212327;
 
@@ -31,36 +30,14 @@ body {
   min-height: 100vh;
 }
 
-p {
-	margin: 0;
-	padding: 0;
-}
-
 .calculator {
 	padding: 2rem;
 	max-width: 350px;
 	height: 500px;
 }
 
-.display, .buttons {
+.buttons {
 	padding: 15px;
-}
-
-.display {
-	display: flex;
-	flex-direction: column;
-	align-items: end;
-	justify-content: center;
-}
-
-.current-number {
-	font-size: 45px;
-	font-weight: 500;
-}
-
-.operation {
-	color: #CCCDD7;
-	min-height: 24px;
 }
 
 div.buttons {
@@ -81,6 +58,7 @@ div.buttons {
 button {
 	min-width: 70px;
 	min-height: 70px;
+  color: rgba(255, 255, 255, 0.87);
   border-radius: 35px;
   border: 1px solid transparent;
   font-size: 20px;

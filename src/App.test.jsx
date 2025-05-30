@@ -49,6 +49,25 @@ describe("Display constraints", () => {
 
     	expect(display.textContent).toBe("7")
 	})
+
+	it("should return to 0 when deleting a single digit negative number", async () => {
+		render(<App />)
+		const user = userEvent.setup()
+		const display = screen.getByText((_, el) =>
+      		el?.classList.contains("current-number")
+    	)
+
+		await clickBtn(user, "9")
+		await clickBtn(user, "9")
+		await clickBtn(user, "+/-")
+		await clickBtn(user, "DEL")
+
+		expect(display.textContent).toBe("-9")
+
+		await clickBtn(user, "DEL")
+		
+		expect(display.textContent).toBe("0")
+	})
 })
 
 describe("Calculator operations", () => {
